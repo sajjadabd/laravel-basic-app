@@ -8,12 +8,12 @@ class AuthController extends Controller
 {
     //
     public function login() {
-        return request()->all();
+        return request(['email' , 'password']);
         return 'login';
     }
 
     public function register() {
-        return request()->all();
+        return request([ 'username' , 'email' , 'password' ]);
         return 'register';
     }
 }

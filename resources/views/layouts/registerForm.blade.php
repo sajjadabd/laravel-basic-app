@@ -1,4 +1,7 @@
 <section >
+	<h1 class="text-3xl font-bold m-10 text-center">
+    Register
+  </h1>
 	<form action="/register" method="POST" class="flex flex-col mx-auto my-20  items-center space-y-4">
 		@csrf
 		<input value="{{ old('username') }}" type="username" name="username" placeholder="Username" class="input-dark" >

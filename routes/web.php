@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use \App\Http\Controllers\PagesController;
 use \App\Http\Controllers\AuthController;
+use \App\Http\Controllers\PostsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,7 +19,7 @@ use \App\Http\Controllers\AuthController;
 */
 
 Route::get('/', [PagesController::class , 'home']);
-Route::get('/about', [PagesController::class , 'about']);
+
 Route::get('/login', [PagesController::class , 'login'])->name('login');
 Route::get('/register', [PagesController::class , 'register'])->name('register');
 
@@ -25,3 +27,6 @@ Route::get('/register', [PagesController::class , 'register'])->name('register')
 Route::post('/logout', [AuthController::class , 'logout']);
 Route::post('/login', [AuthController::class , 'login']);
 Route::post('/register', [AuthController::class , 'register']);
+
+Route::get('/create-post', [PostsController::class , 'createPost']);
+Route::post('/create-post', [PostsController::class , 'storePost']);

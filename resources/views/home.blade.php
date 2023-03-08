@@ -7,6 +7,8 @@
 
   @include('layouts.login')
 
+  @include('layouts.register')
+
   <h1 class="text-3xl font-bold">
     Hello world!
   </h1>

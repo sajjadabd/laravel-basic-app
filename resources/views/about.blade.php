@@ -5,7 +5,7 @@
 
   @include('layouts.navigation')
 
-  @include('layouts.login')
+  {{-- @include('layouts.login') --}}
 
   <h1 class="text-3xl font-bold">
     About Page!

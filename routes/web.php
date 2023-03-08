@@ -18,8 +18,8 @@ use \App\Http\Controllers\AuthController;
 
 Route::get('/', [PagesController::class , 'home']);
 Route::get('/about', [PagesController::class , 'about']);
-Route::get('/login', [PagesController::class , 'login']);
-Route::get('/register', [PagesController::class , 'register']);
+Route::get('/login', [PagesController::class , 'login'])->name('login');
+Route::get('/register', [PagesController::class , 'register'])->name('register');
 
 
 Route::post('/login', [AuthController::class , 'login']);

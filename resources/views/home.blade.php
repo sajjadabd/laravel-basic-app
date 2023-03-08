@@ -9,4 +9,16 @@
     Hello world!
   </h1>
 
+  @error('username')
+    <p>{{ $message }}</p>
+  @enderror()
+
+  @error('email')
+    <p>{{ $message }}</p>
+  @enderror()
+
+  @error('password')
+    <p>{{ $message }}</p>
+  @enderror()
+
 @endsection

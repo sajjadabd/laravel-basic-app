@@ -5,6 +5,6 @@
 
   @include('layouts.navigation')
 
-  @include('layouts.register')
+  @include('layouts.registerForm')
 
 @endsection

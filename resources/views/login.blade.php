@@ -5,6 +5,6 @@
 
   @include('layouts.navigation')
 
-  @include('layouts.login')
+  @include('layouts.loginForm')
 
 @endsection

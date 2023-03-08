@@ -5,7 +5,7 @@
 				<a href="/">home</a>
 			</li>
 			<li>
-				<a href="/about">about</a>
+				<a href="/about">create</a>
 			</li>
 			<li>
 				<a href="/register">register</a>

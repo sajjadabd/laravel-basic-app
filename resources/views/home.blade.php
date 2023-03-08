@@ -29,7 +29,7 @@
     <section class="flex flex-col ">
       @foreach ($posts as $post)
         <article class="p-10 mx-48 mt-10">
-          <a href="/posts/{{ $post->id }}">
+          <a href="/posts/{{ $post->id }}" class="hover:underline hover:underline-offset-8 self-start inline-block">
             <h2 class="text-3xl px-6 mb-4">{{ $post->title }}</h3>
           </a>
           

@@ -31,7 +31,9 @@ class AuthController extends Controller
         //return $credentials;
 
         if ( Auth::attempt($credentials) ) {
+            $request->session()->regenerate();
             return redirect()->to('/')->with('success','logging in successfully');
+
         }
         
         /*

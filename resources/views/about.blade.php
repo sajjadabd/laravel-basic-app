@@ -7,7 +7,7 @@
 
   {{-- @include('layouts.login') --}}
 
-  <h1 class="text-3xl font-bold">
+  <h1 class="text-3xl font-bold m-10">
     About Page!
   </h1>
 

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use \App\Http\Controllers\PagesController;
+use \App\Http\Controllers\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,8 @@ Route::get('/', [PagesController::class , 'home']);
 
 
 Route::get('/about', [PagesController::class , 'about']);
+
+
+
+Route::post('/login', [AuthController::class , 'login']);
+Route::post('/register', [AuthController::class , 'register']);

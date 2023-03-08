@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Validator;
 use Illuminate\Validation\Rule;
-
+use Illuminate\Support\Str;
 use \App\Models\Post;
 
 
@@ -37,6 +37,7 @@ class PostsController extends Controller
         Post::create([
             'title' => $request->input('title'),
             'user_id' => auth()->user()->id ,
+            'slug' => Str::slug($request->input('title')),
             'content' => $request->input('content')
         ]);
 

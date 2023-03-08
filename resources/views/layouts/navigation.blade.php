@@ -13,6 +13,12 @@
 			<li>
 				<a href="/register">register</a>
 			</li>
+			<form action="/logout" method="post">
+				@csrf
+				<button type="submit">
+					logout
+				</button>
+			</form>
 		</ul>
 	</nav>
 </header>

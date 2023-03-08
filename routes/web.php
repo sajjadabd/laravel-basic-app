@@ -21,6 +21,7 @@ Route::get('/about', [PagesController::class , 'about']);
 Route::get('/login', [PagesController::class , 'login'])->name('login');
 Route::get('/register', [PagesController::class , 'register'])->name('register');
 
-
+	
+Route::post('/logout', [AuthController::class , 'logout']);
 Route::post('/login', [AuthController::class , 'login']);
 Route::post('/register', [AuthController::class , 'register']);

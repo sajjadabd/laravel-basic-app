@@ -10,7 +10,17 @@ use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
-    //
+    
+    public function logout() {
+
+        if( auth()->check() ) {
+            auth()->logout();
+        }
+
+        return redirect('/')->with('logout' , 'logged out successfully');
+
+    }
+
     public function login(Request $request) {
 
         //dd(request()->all());
@@ -34,6 +44,10 @@ class AuthController extends Controller
             $request->session()->regenerate();
             return redirect()->to('/')->with('success','logging in successfully');
 
+        } else {
+            return redirect('/login')
+                        ->withErrors(['mismatch' => 'Wrong User Credentials'])
+                        ->withInput();
         }
         
         /*

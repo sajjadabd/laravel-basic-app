@@ -10,5 +10,9 @@
       <p class="error">{{ $message }}</p>
     @enderror
     <button type="submit" class="btn-dark">Login</button>
+    @error('mismatch')
+      <p class="error">{{ $message }}</p>
+    @enderror
   </form>
+
 </header>

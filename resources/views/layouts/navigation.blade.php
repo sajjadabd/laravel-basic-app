@@ -1,7 +1,7 @@
 <header>
 	<nav>
 		<ul class="flex flex-row space-x-16 justify-center mt-10">
-			<li>
+			<li class="">
 				<a href="/">home</a>
 			</li>
 			<li>

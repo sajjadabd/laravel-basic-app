@@ -17,7 +17,7 @@
   }
 
   .btn-dark {
-  	@apply w-80 rounded-2xl px-6 py-2 border-0 ring ring-2 ring-sky-200 hover:bg-slate-200 hover:text-gray-900 active:bg-slate-300 ;
+  	@apply w-80 rounded-2xl px-6 py-2 border-0 ring ring-2 ring-sky-200 hover:bg-slate-200 hover:text-gray-900 active:text-gray-900 active:bg-slate-300 ;
   }
 
   .error {

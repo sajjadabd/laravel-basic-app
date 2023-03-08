@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use \App\Models\User;
 use Validator;
+use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -14,8 +15,8 @@ class AuthController extends Controller
 
         //dd(request()->all());
 
-        $validator = Validator::make($request->all(), [
-            'email' => 'required|email|unique:users',
+        $validator = Validator::make( $request->all(), [
+            'email' => 'required|email',
             'password' => 'required|min:3',
         ]);
  
@@ -23,6 +24,14 @@ class AuthController extends Controller
             return redirect('/login')
                         ->withErrors($validator)
                         ->withInput();
+        }
+
+        $credentials = $request->only('email' , 'password');
+
+        //return $credentials;
+
+        if ( Auth::attempt($credentials) ) {
+            return redirect()->to('/')->with('success','logging in successfully');
         }
         
         /*

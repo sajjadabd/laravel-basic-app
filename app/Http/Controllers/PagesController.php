@@ -11,9 +11,9 @@ class PagesController extends Controller
     public function home() {
         $posts = Post::with('user')->get();
 
-        return $posts;
+        //return $posts;
 
-        return view('home');
+        return view('home')->with(compact('posts'));
     }
 
     public function about() {

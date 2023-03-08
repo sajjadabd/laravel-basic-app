@@ -22,6 +22,22 @@
             {{ session()->get('success') }}
         </div>
     @endif
+
+
+    <div class="m-6"></div>
+
+    <section class="flex flex-col ">
+      @foreach ($posts as $post)
+        <article class="p-10 mx-48 mt-10">
+          <h3 class="px-6">{{ $post->title }}</h3>
+          <hr class="my-4">
+          <p class="px-6">{{ $post->content }}</p>
+        </article>
+
+      @endforeach
+    </section>
+    
+
   </main>
 
 @endsection

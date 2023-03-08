@@ -8,17 +8,22 @@
 				<a href="/about">about</a>
 			</li>
 			<li>
-				<a href="/login">login</a>
-			</li>
-			<li>
 				<a href="/register">register</a>
 			</li>
+			@auth
 			<form action="/logout" method="post">
 				@csrf
 				<button type="submit">
 					logout
 				</button>
 			</form>
+			@else
+			<li>
+				<a href="/login">login</a>
+			</li>
+			@endauth
+			
+			
 		</ul>
 	</nav>
 </header>

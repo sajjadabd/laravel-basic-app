@@ -13,7 +13,7 @@
       </h1>
     @else
       <h1 class="text-3xl font-bold">
-        Hello world!
+        Homepage !
       </h1>
     @endauth
 

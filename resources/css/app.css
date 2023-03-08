@@ -5,7 +5,7 @@
 
 @layer components {
   .input {
-    @apply px-6 py-2 border-2 rounded-2xl ring ring-2 ring-sky-200 shadow-sky-200;
+    @apply px-6 py-2 border-2 rounded-2xl ring ring-2 ring-sky-200 shadow-sky-200 hover:ring-sky-300 active:ring-sky-300 focus:ring-sky-300 outline-none;
   }
 
   .btn {

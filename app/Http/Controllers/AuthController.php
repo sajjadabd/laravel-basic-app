@@ -15,9 +15,12 @@ class AuthController extends Controller
 
         if( auth()->check() ) {
             auth()->logout();
+            return redirect('/')->with('success' , 'logged out successfully');
+        } else {
+            return redirect('/');
         }
 
-        return redirect('/')->with('logout' , 'logged out successfully');
+        
 
     }
 
@@ -81,6 +84,17 @@ class AuthController extends Controller
                         ->withInput();
         }
 
+        $user = User::create([
+            'username' => $request->input('username'),
+            'email' => $request->input('email'),
+            'password' => bcrypt($request->input('password')),
+        ]); 
+
+        auth()->login($user);
+
+
+        return redirect()->to('/')->with('success' , 'you successfully register an account');
+
         /*
         $validated_data = request()->validate([ 
             'username' => [  'required' , Rule::unique('users' , 'username')] , 
@@ -91,11 +105,7 @@ class AuthController extends Controller
 
         $validated_data['password'] = bcrypt($validated_data['password']);
 
-        User::create([
-            'username' => $validated_data['username'],
-            'email' => $validated_data['email'],
-            'password' => $validated_data['password']
-        ]); 
+        
         */
         //return dd($validated_data);
 

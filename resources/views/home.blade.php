@@ -3,9 +3,12 @@
 
 @section('content')
 
-@include('layouts.header')
-<h1 class="text-3xl font-bold">
-  Hello world!
-</h1>
+  @include('layouts.navigation')
+
+  @include('layouts.login')
+
+  <h1 class="text-3xl font-bold">
+    Hello world!
+  </h1>
 
 @endsection

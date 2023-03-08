@@ -24,16 +24,18 @@
     @endif
 
 
-    <div class="m-6"></div>
+    <div class="mb-10></div>
 
     <section class="flex flex-col ">
       @foreach ($posts as $post)
         <article class="p-10 mx-48 mt-10">
-          <h3 class="px-6">{{ $post->title }}</h3>
-          <hr class="my-4">
+          <h2 class="text-3xl px-6 mb-4">{{ $post->title }}</h3>
+          
           <p class="px-6">{{ $post->content }}</p>
         </article>
-
+        @if (!$loop->last)
+          <hr class="my-10 border-dashed mx-40">
+        @endif
       @endforeach
     </section>
     

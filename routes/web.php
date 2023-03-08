@@ -31,3 +31,6 @@ Route::post('/register', [AuthController::class , 'register']);
 
 Route::get('/create-post', [PostsController::class , 'createPost']);
 Route::post('/create-post', [PostsController::class , 'storePost']);
+
+
+Route::get('/posts/{post}', [PostsController::class , 'show']);

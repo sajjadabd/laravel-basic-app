@@ -29,7 +29,9 @@
     <section class="flex flex-col ">
       @foreach ($posts as $post)
         <article class="p-10 mx-48 mt-10">
-          <h2 class="text-3xl px-6 mb-4">{{ $post->title }}</h3>
+          <a href="/posts/{{ $post->id }}">
+            <h2 class="text-3xl px-6 mb-4">{{ $post->title }}</h3>
+          </a>
           
           <p class="px-6">{{ $post->content }}</p>
         </article>

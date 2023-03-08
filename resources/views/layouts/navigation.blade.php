@@ -7,9 +7,7 @@
 			<li>
 				<a href="/create-post">create</a>
 			</li>
-			<li>
-				<a href="/register">register</a>
-			</li>
+			
 			@auth
 			<form action="/logout" method="post">
 				@csrf
@@ -18,6 +16,9 @@
 				</button>
 			</form>
 			@else
+			<li>
+				<a href="/register">register</a>
+			</li>
 			<li>
 				<a href="/login">login</a>
 			</li>

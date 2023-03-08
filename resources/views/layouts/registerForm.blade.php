@@ -5,7 +5,7 @@
 		@error('username')
 			<p class="text-sm text-red-600 w-80">{{ $message }}</p>
 		@enderror
-		<input value="{{ old('email') }}" type="email" name="email" placeholder="Email" class="input">
+		<input value="{{ old('email') }}" type="text" name="email" placeholder="Email" class="input">
 		@error('email')
 			<p class="text-sm text-red-600 w-80">{{ $message }}</p>
 		@enderror

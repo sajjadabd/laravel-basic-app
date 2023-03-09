@@ -9,7 +9,7 @@ use \App\Models\Post;
 class PagesController extends Controller
 {
     public function home() {
-        $posts = Post::with('user')->get();
+        $posts = Post::with('user')->latest()->get();
 
         //return $posts;
 

@@ -27,5 +27,7 @@ class Post extends Model
 
     public function getTime() {
         return Carbon::create($this->created_at)->diffForHumans();
+        // return Carbon::create($this->created_at)->format('m');
+        // return Carbon::create($this->created_at)->format('d-m-Y');
     }
 }

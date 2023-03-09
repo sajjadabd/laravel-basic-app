@@ -32,11 +32,14 @@
           
           <div class="flex flex-row space-x-2 items-end  px-6 mb-4">
             <a href="/posts/{{ $post->id }}" class="hover:underline self-start inline-block">
-              <h2 class="text-3xl">{{ $post->title }}</h3>
+              <h2 class="text-3xl font-bold">{{ $post->title }}</h3>
             </a>
             <p>.</p>
             <p>
-              by  {{ $post->user->username }}
+              by  
+            </p>
+            <p class="font-bold">
+              {{ $post->user->username }}
             </p>
             <p>.</p>
             <p>

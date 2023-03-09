@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 use \App\Models\User;
 
+use Carbon\Carbon;
+
 class Post extends Model
 {
     use HasFactory;
@@ -21,5 +23,9 @@ class Post extends Model
 
     public function user() {
         return $this->belongsTo(User::class , 'user_id');
+    }
+
+    public function getTime() {
+        return Carbon::create($this->created_at)->diffForHumans();
     }
 }
